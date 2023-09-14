@@ -1,0 +1,59 @@
+## Container Instance
+Is a serverless compute service that enables you to instantly run containers without managing any servers. With Filonef Container Instance, you can quickly create containers that can be used for various types of computing, one of which is to deploy web applications.
+
+### Create the Container Instance
+1. Login to filonef dashboard [https://beta.filonef.id](https://beta.filonef.id)
+
+2. You will get a free quota to create 1 container instance.
+
+3. Go to Dashboard -> Container Instace, click on Create.
+![](/img/container-dashboard.png)
+
+4. Enter details of the container.
+![](/img/create-container.png)
+
+- `Name` : Identifies the container and will be used as a hostname.
+- `Root Password` : SSH password to access the container.
+- `Web Endpoint` :  The endpoint where your http server will be exposed (you can run your http server on port 80).
+- `Container Image` : Image used by the container.
+
+After you input the details, click submit to create the container.
+
+### Accessing the Container
+As we noticed earlier, you can access the container using ssh. After you create the container, you will get a random ssh port.
+![](/img/detail-container.png)
+
+1. SSH the container.
+```copy
+ssh root@159.65.9.19 -p 12079
+```
+Note: Use the password you entered when creating the container.
+
+2. Congratulations, you can now enter the container. Just imagine this as a VPS in general, you can do anything here.
+```
+root@demotest:~# hostname
+demotest
+root@demotest:~#
+```
+
+### Deploying HTTP Server
+You can deploy anything here, python, golang, react, next, anything. Here I will make an example of creating a static http server with python3.
+
+1. Create simple index.html
+```html filename="index.html" {} copy
+<h1>Hello World</h1>
+```
+
+2. Start the python http server
+```
+python3 -m http.server 80
+```
+
+This will start the server on port 8000 by default. You will see output like the following:
+```
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+```
+Your website is now accessible at https://endpoint, where this example endpoint is https://demo.filonef.site
+
+![](/img/demo-site.png)
+
