@@ -1,13 +1,15 @@
 {
-  "index": "Introduction",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "index": "Documentation",
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contact",
     "type": "page",
     "href": "https://dama.zip",
+    "newWindow": true
+  }, 
+  "Filonef Dashboard":{
+    "title": "Filonef Dashboard ↗",
+    "type": "page",
+    "href": "https://beta.filonef.id",
     "newWindow": true
   }
 }
