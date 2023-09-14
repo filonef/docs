@@ -3,13 +3,13 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: <span>Filonef Docs</span>,
-  // project: {
-  //   link: 'https://github.com/shuding/nextra-docs-template',
-  // },
+  project: {
+    link: 'https://github.com/fionef/docs',
+  },
   // chat: {
   //   link: 'https://discord.com',
   // },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/filonef/docs',
   footer: {
     text: 'Filonef Docs',
   },
