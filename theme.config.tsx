@@ -4,6 +4,15 @@ import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Filonef Docs',
+        // description: '%s - Filonef Docs'
+      }
+    }
+  },
   logo: <span>Filonef Docs</span>,
   project: {
     link: 'https://github.com/fionef/docs',
